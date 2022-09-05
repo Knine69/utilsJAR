@@ -3,8 +3,8 @@ package demo;
 import java.util.Scanner;
 
 public class App {
-    private static Scanner scan = new Scanner(System.in);
-    private static StringUtils utils = new StringUtils();
+    private static final Scanner scan = new Scanner(System.in);
+    private static final StringUtils utils = new StringUtils();
 
     public static void main(String[] args) {
         String number;
