@@ -3,16 +3,25 @@ package demo;
 import java.util.Scanner;
 
 public class App {
+    private static Scanner scan = new Scanner(System.in);
+    private static StringUtils utils = new StringUtils();
+
     public static void main(String[] args) {
-        System.out.println(new App().greeting());
-        Scanner scan  = new Scanner(System.in);
-
+        String number;
         System.out.println("Insert the number you want to evaluate: ");
-        String number = scan.nextLine();
-        System.out.println(number + " is a positive number: " + new StringUtils().isPositiveNumber(number));
+        while (true) {
+            number = scan.nextLine();
+            if (utils.checkIfNumber(number)) {
+                if (utils.isPositiveNumber(number)) {
+                    System.out.println("Positive number inserted: " + number);
+                } else {
+                    System.out.println("Negative number inserted: " + number);
+                }
+                break;
+            } else {
+                System.out.println("Input inserted is not a number, please insert one.");
+            }
+        }
     }
 
-    public String greeting(){
-        return "Hello... Starting application";
-    }
 }

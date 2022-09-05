@@ -8,4 +8,8 @@ public class StringUtils {
         return NumberUtils.createInteger(number) >= 0;
     }
 
+    public boolean checkIfNumber(String input){
+        return NumberUtils.isCreatable(input);
+    }
+
 }
